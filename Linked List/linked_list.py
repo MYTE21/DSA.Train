@@ -39,7 +39,15 @@ class LinkedList:
         self.head.next = node
 
     def insert(self, data, new_data):
-        pass
+        current_node = self.head.next
+
+        while current_node:
+            if current_node.data == data:
+                new_node = Node(new_data, current_node.next)
+                current_node.next = new_node
+                break
+
+            current_node = current_node.next
 
     def search(self, item):
         current_node = self.head.next
