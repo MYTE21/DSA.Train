@@ -42,7 +42,15 @@ class LinkedList:
         pass
 
     def search(self, item):
-        pass
+        current_node = self.head.next
+
+        while current_node:
+            if current_node.data == item:
+                return current_node
+
+            current_node = current_node.next
+        
+        return None
 
     def remove(self, item):
         pass
