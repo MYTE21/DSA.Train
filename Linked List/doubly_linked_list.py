@@ -10,22 +10,65 @@ class Node:
 
 class DoublyLinkedList:
     def __init__(self):
-        pass
+        self.head = Node()
 
     def __repr__(self):
-        pass
+        nodes = []
+        current_node = self.head.next
+
+        while current_node:
+            nodes.append(repr(current_node))
+            current_node = current_node.next
+
+        return ','.join(nodes)
 
     def append(self, data):
-        pass
+        node = Node(data)
+
+        if self.head.next is None:
+            self.head.next = node
+            return
+
+        current_node = self.head.next
+
+        while current_node.next:
+            current_node = current_node.next
+
+        current_node.next = node
+        node.prev = current_node
 
     def prepend(self, data):
-        pass
+        first_node = self.head.next
+        new_node = Node(data, None, first_node)
+        self.head.next = new_node
+
+        if first_node:
+            first_node.prev = new_node
 
     def search(self, item):
-        pass
+        current_node = self.head.next
+
+        while current_node:
+            if current_node.data == item:
+                return current_node
+
+            current_node = current_node.next
+
+        return None
 
     def remove_node(self, node):
-        pass
+        if node.prev:
+            node.prev.next = node.next
+        else:
+            self.head.next = node.next
+
+        if node.next:
+            node.next.prev = node.prev
 
     def remove(self, item):
-        pass
+        node = self.search(item)
+
+        if node is None:
+            return
+
+        self.remove_node(node)
