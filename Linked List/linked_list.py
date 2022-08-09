@@ -78,3 +78,23 @@ class LinkedList:
             self.head.next = current_node.next
         else:
             previous_node.next = current_node.next
+
+
+if __name__ == "__main__":
+    ll = LinkedList()
+    ll.append(5)
+    ll.append(10)
+    print(f"After adding 5 and 10 in the linked list (append): [ {ll} ]")    # 5, 10
+    ll.prepend(1)
+    print("After adding 1 in the beginning of the linked list (prepend): [ {} ]".format(ll))    # 1, 5, 10
+    print("Search of 5 (search): ", ll.search(5), " [means 5 is present in the linked list]")    # 5
+    print("Search of 50 (search): ", ll.search(50), " [means the linked list has no element as 50]")    # None
+    ll.append(50)
+    print("After adding 50 in the linked list (append): [", ll, "]")    # 1, 5, 10, 50
+    print("Search of 50 (search): ", ll.search(50), " [now 50 is present in the linked list]")    # 50
+    ll.remove(50)
+    print(f"After removing 50 from the linked list (remove): [ {ll} ]")    # 1, 5, 10
+    ll.insert(5, 6)
+    print(f"Inserting 6 after 5 in the linked list (insert): [ {ll} ]")    # 1, 5, 6, 10
+    ll.remove(1)
+    print(f"After removing 1 from the linked list (remove): [ {ll} ]")    # 5, 6, 10
