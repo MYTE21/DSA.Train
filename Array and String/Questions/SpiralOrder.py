@@ -7,68 +7,37 @@ from typing import List  # Type hinting -> List
 
 
 def spiral_order(matrix: List[List[int]]) -> List[int]:
-    up, down, right, left = False, False, True, False
-    r, c = 0, 1
-    count = 1
-    rows = len(matrix)
-    columns = len(matrix[0])
-    total_length = rows * columns
-    spiral_list = [matrix[0][0]]
-    matrix[0][0] = False
+    m, n = len(matrix), len(matrix[0])
+    if m == 0:
+        return []
 
-    while True:
-        if count == total_length:
-            break
+    left, right, top, bottom = 0, n - 1, 0, m - 1
+    direction_list = ['left to right', 'top to bottom', 'right to left', 'bottom to top']
+    direction_index = 0
+    direction = direction_list[0]
+    result = []
 
-        if up:
-            if r > -1 and matrix[r][c] != False:
-                spiral_list.append(matrix[r][c])
-                matrix[r][c] = False
-                r -= 1
-                count += 1
-            else:
-                r += 1
-                c += 1
-                right = True
-                up = False
+    while top <= bottom and left <= right:
+        if direction == 'left to right':
+            for i in range(left, right + 1):
+                result.append(matrix[top][i])
+            top += 1
+        elif direction == 'top to bottom':
+            for i in range(top, bottom + 1):
+                result.append(matrix[i][right])
+            right -= 1
+        elif direction == 'right to left':
+            for i in range(right, left - 1, -1):
+                result.append(matrix[bottom][i])
+            bottom -= 1
+        else:       # direction == 'bottom to top
+            for i in range(bottom, top - 1, -1):
+                result.append(matrix[i][left])
+            left += 1
+        direction_index = (direction_index + 1) % 4
+        direction = direction_list[direction_index]
 
-        if down:
-            if r < rows and matrix[r][c] != False:
-                spiral_list.append(matrix[r][c])
-                matrix[r][c] = False
-                r += 1
-                count += 1
-            else:
-                r -= 1
-                c -= 1
-                down = False
-                left = True
-
-        if right:
-            if c < columns and matrix[r][c] != False:
-                spiral_list.append(matrix[r][c])
-                matrix[r][c] = False
-                c += 1
-                count += 1
-            else:
-                c -= 1
-                r += 1
-                right = False
-                down = True
-
-        if left:
-            if c > -1 and matrix[r][c] != False:
-                spiral_list.append(matrix[r][c])
-                matrix[r][c] = False
-                c -= 1
-                count += 1
-            else:
-                c += 1
-                r -= 1
-                left = False
-                up = True
-
-    return spiral_list
+    return result
 
 
 if __name__ == "__main__":
