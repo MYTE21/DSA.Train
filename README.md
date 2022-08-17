@@ -2,7 +2,7 @@
 
 Note List:
 1. Arrays
-2. Linked List
+2. Linked List ✔️
 3. Binary Search
 4. Sliding Window
 5. 2 Pointers
