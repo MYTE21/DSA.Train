@@ -6,20 +6,18 @@
 
 
 def is_hotel_bookings_possible(arrive, depart, room):
-    arrive.sort(), depart.sort()
-    len_a, len_d = 0, 0
+    events = [(arrival_day, 0) for arrival_day in arrive] + [(departure_day, 1) for departure_day in depart]
+    events.sort()
+    print(events)
     count = 0
-    n = len(arrive)
 
-    while len_a < n and len_d < n:
-        if arrive[len_a] <= depart[len_d]:
+    for event in events:
+        if event[1] == 0:
             count += 1
-            if count > room:
-                return False
-            len_a += 1
         else:
             count -= 1
-            len_d += 1
+        if count > room:
+            return False
 
     return True
 
