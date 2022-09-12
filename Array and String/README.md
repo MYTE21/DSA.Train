@@ -5,5 +5,6 @@
 - Extra (Square Spiral) ✔️
 - Maximum Subarray ✔️ 
 - Max Distance ✔️
-- Hotel Bookings Possible
-- ... 
+- Hotel Bookings Possible ✔️
+- Maximum Unsorted Subarray 
+- ...
