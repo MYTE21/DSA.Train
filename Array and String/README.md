@@ -3,5 +3,8 @@
 - Remove Duplicates ✔️
 - Spiral Order ✔️
 - Extra (Square Spiral) ✔️
-- Maximum Subarray
+- Maximum Subarray ✔️ 
+- Max Distance ✔️
+- Hotel Bookings Possible ✔️
+- Maximum Unsorted Subarray 
 - ...
