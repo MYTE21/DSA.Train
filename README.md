@@ -7,7 +7,7 @@
 3. Stack & Queue
    1. Stack
    2. Queue
-4. Recursion
+4. Recursion ✔️
 5. Tree
 6. Heap & Priority Queue
    1. Heap
