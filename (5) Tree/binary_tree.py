@@ -59,6 +59,16 @@ def pre_order(node):
         pre_order(node.right)
 
 
+def post_order(node):
+    if node.left:
+        post_order(node.left)
+    if node.right:
+        post_order(node.right)
+
+    print(node)
+
+
 if __name__ == "__main__":
     root = create_binary_tree()
-    pre_order(root)
+    # pre_order(root)
+    post_order(root)
