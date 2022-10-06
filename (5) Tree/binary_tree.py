@@ -17,13 +17,6 @@ class Node:
 def create_binary_tree():
     """
     Create Binary Tree
-         _2_
-       /    \
-      7      9
-     / \      \
-    1   6      8
-       / \   /  \
-      5  10 3    4
     input: None
     return: The Binary Tree
     """
@@ -78,8 +71,25 @@ def in_order(node):
         in_order(node.right)
 
 
+def print_tree(node, level=0):
+    if node is not None:
+        print_tree(node.right, level + 1)
+        print(" " * 4 * level + "-> " + str(node.data))
+        print_tree(node.left, level + 1)
+
+
 if __name__ == "__main__":
+    # Create Binary Tree
     root = create_binary_tree()
+
+    # Print The Binary Tree
+    print_tree(root)
+
+    # Traverse Pre-Order
     pre_order(root)
+
+    # Traverse Post Order
     post_order(root)
+
+    # Traverse In-Order
     in_order(root)
