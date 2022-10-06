@@ -15,11 +15,6 @@ class Node:
 
 
 def create_binary_tree():
-    """
-    Create Binary Tree
-    input: None
-    return: The Binary Tree
-    """
     # Create Nodes
     two, seven, nine, one, six, eight, five, ten, three, four = \
         Node(2), Node(7), Node(9), Node(1), Node(6), Node(8), Node(5), Node(10), Node(3), Node(4)
