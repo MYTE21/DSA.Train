@@ -74,17 +74,8 @@ def print_tree(node, level=0):
 
 
 if __name__ == "__main__":
-    # Create Binary Tree
-    root = create_binary_tree()
-
-    # Print The Binary Tree
-    print_tree(root)
-
-    # Traverse Pre-Order
-    pre_order(root)
-
-    # Traverse Post Order
-    post_order(root)
-
-    # Traverse In-Order
-    in_order(root)
+    root = create_binary_tree()    # Creat Binary Tree
+    print_tree(root)               # Print The Binary Tree
+    pre_order(root)                # Traverse Pre-Order
+    post_order(root)               # Traverse Post Order
+    in_order(root)                 # Traverse In-Order
