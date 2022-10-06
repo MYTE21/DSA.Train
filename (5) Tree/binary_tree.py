@@ -16,8 +16,7 @@ class Node:
 
 def create_binary_tree():
     # Create Nodes
-    two, seven, nine, one, six, eight, five, ten, three, four = \
-        Node(2), Node(7), Node(9), Node(1), Node(6), Node(8), Node(5), Node(10), Node(3), Node(4)
+    two, seven, nine, one, six, eight, five, ten, three, four = Node(2), Node(7), Node(9), Node(1), Node(6), Node(8), Node(5), Node(10), Node(3), Node(4)
 
     # Create The Binary Tree
     two.add_left(seven)
