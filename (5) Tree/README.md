@@ -18,7 +18,7 @@
 * **EXTRA**: Tracking Parent Node.
 
 ## Tree
-![Tree](../assets/(5)%20Tree/Tree.jpg)
+<img height="265em" src="../assets/(5) Tree/tree.png" alt="">
 
 ## Binary Tree
 
