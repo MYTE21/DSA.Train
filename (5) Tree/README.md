@@ -6,14 +6,17 @@
 
 ### Contents:
 
-1. [Binary Tree]()
-   1. Create `Node`. 
+1. [Binary Tree](#binary-tree-binary-tree-id)
+   1. Create `Node`.
    2. Create `Tree`.
 2. [Tree Traverse]()
    1. `Pre-order` traverse.
    2. `Post-order` traverse.
    3. `In-order` traverse.
+
 * **EXTRA**: Tracking Parent Node.
+
+## Binary Tree {#binary-tree-id}
 
 `If we wanted, 'stack' can be applied instead of 'recursion' for the algorithms.`
 
