@@ -9,6 +9,7 @@
    2. Queue
 4. Recursion ✔️
 5. Tree ✔️
-6. Heap & Priority Queue
+6. Binary Search Tree ✔️
+7. Heap & Priority Queue
    1. Heap
    2. Priority Queue
