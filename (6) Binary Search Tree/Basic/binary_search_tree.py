@@ -51,5 +51,5 @@ def create_bst():
 
 
 if __name__ == "__main__":
-    root = create_bst()
-    print(root)
+    root_node = create_bst()
+    print(root_node)
