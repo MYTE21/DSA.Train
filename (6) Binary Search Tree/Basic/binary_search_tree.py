@@ -50,6 +50,18 @@ def create_bst():
     return root
 
 
+# * Printing the Binary Tree in Ascending Order using 'In-Order Traversal'
+def in_order(node):
+    if node.left:
+        in_order(node.left)
+
+    print(node)
+
+    if node.right:
+        in_order(node.right)
+
+
 if __name__ == "__main__":
     root_node = create_bst()
     print(root_node)
+    in_order(root_node)
