@@ -73,11 +73,23 @@ def bst_search(node, key):
     return node
 
 
+# Smallest Number
+def bst_minimum(root):
+    while root.left is not None:
+        root = root.left
+
+    return root
+
+
 if __name__ == "__main__":
     root_node = create_bst()
     print("Root node of the BST: ", root_node)
     print("Ascending order of the BST: ")
     in_order(root_node)
+
+    # Smallest Number in the Binary Search Tree
+    smallest_number = bst_minimum(root_node)
+    print("Smallest Number: ", smallest_number)
 
     # Search elements in the Binary Search Tree
     for item in [7, 8]:
