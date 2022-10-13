@@ -81,6 +81,17 @@ def bst_minimum(root):
     return root
 
 
+def bst_transplant(root, current_node, new_node):
+    if current_node.parent is None:
+        root = new_node
+    elif current_node == current_node.parent.left:
+        current_node.parent.add_left(new_node)
+    else:
+        current_node.parent.add_right(new_node)
+
+    return root
+
+
 if __name__ == "__main__":
     root_node = create_bst()
     print("Root node of the BST: ", root_node)
