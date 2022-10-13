@@ -61,7 +61,26 @@ def in_order(node):
         in_order(node.right)
 
 
+def bst_search(node, key):
+    while node is not None:
+        if node.data == key:
+            return node
+        if key < node.data:
+            node = node.left
+        else:
+            node = node.right
+
+    return node
+
+
 if __name__ == "__main__":
     root_node = create_bst()
-    print(root_node)
+    print("Root node of the BST: ", root_node)
+    print("Ascending order of the BST: ")
     in_order(root_node)
+
+    # Search elements in the Binary Search Tree
+    for item in [7, 8]:
+        print("Searching: ", item)
+        result = bst_search(root_node, item)
+        print(result)
