@@ -92,10 +92,27 @@ def bst_transplant(root, current_node, new_node):
     return root
 
 
+def bst_delete(root, node):
+    if node is not None:
+        if node.left is None:
+            root = bst_transplant(root, node, node.right)
+        elif node.right is None:
+            root = bst_transplant(root, node, node.left)
+        else:
+            min_node = bst_minimum(node.right)
+            if min_node.parent != node:
+                root = bst_transplant(root, min_node, min_node.right)
+                min_node.add_right(node.right)
+            root = bst_transplant(root, node, min_node)
+            min_node.add_left(node.left)
+
+    return root
+
+
 if __name__ == "__main__":
     root_node = create_bst()
     print("Root node of the BST: ", root_node)
-    print("Ascending order of the BST: ")
+    print("BST in Ascending order: ")
     in_order(root_node)
 
     # Smallest Number in the Binary Search Tree
@@ -103,7 +120,11 @@ if __name__ == "__main__":
     print("Smallest Number: ", smallest_number)
 
     # Search elements in the Binary Search Tree
-    for item in [7, 8]:
-        print("Searching: ", item)
-        result = bst_search(root_node, item)
-        print(result)
+    for ele in [1, 5, 10, 7, 8]:
+        print("Searching: ", ele)
+        result_node = bst_search(root_node, ele)
+        print(f"Found {ele}: ", bool(result_node))
+        print("Will delete: ", result_node)
+        root_node = bst_delete(root_node, result_node)
+        print("Updated BST (Ascending): ")
+        in_order(root_node)
