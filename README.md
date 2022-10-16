@@ -10,7 +10,8 @@
 4. Recursion ✔️
 5. Tree ✔️
 6. Binary Search Tree ✔️
-7. Breadth First Search 
-8. Heap & Priority Queue
+7. Breadth First Search  ✔️
+8. Depth First Search ✔️
+9. Heap & Priority Queue
    1. Heap
    2. Priority Queue
