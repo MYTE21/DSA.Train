@@ -25,16 +25,16 @@ def is_max_heap(heap):
 
 
 def max_heapify(heap, heap_size, i):
-    l = left(i)
-    r = right(i)
+    l_node = left(i)
+    r_node = right(i)
 
-    if l <= heap_size and heap[l] > heap[i]:
-        largest = l
+    if l_node <= heap_size and heap[l_node] > heap[i]:
+        largest = l_node
     else:
         largest = i
 
-    if r <= heap_size and heap[r] > heap[largest]:
-        largest = r
+    if r_node <= heap_size and heap[r_node] > heap[largest]:
+        largest = r_node
 
     if largest != i:
         heap[i], heap[largest] = heap[largest], heap[i]
