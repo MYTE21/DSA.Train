@@ -1,5 +1,6 @@
 # DSA.Train
 
+`Python Cheat Sheet`: [Go to the Note]((0)%20Python%20Cheat%20Sheet)
 1. Array & String
    1. Array
    2. String
