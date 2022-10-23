@@ -1,3 +1,6 @@
+from binarytree import build
+
+
 def left(i):
     return 2 * i
 
@@ -45,6 +48,12 @@ def build_max_heap(heap):
         max_heapify(heap, heap_size, i)
 
 
+def print_tree(tree):
+    temp_tree = tree[1:]
+    root = build(temp_tree)
+    print(root)
+
+
 if __name__ == "__main__":
     # Is the list Max Heap
     print("Is the list Max Heap: ")
@@ -78,6 +87,11 @@ if __name__ == "__main__":
     # Build Max Heap
     print("\nBuild Max Heap:")
     h = [None, 12, 7, 1, 3, 10, 17, 19, 2, 5]
-    print("Before building heap: ", h)
+    print("Before building heap: ")
+    print(h)
+    print_tree(h)
+
     build_max_heap(h)
-    print("After building heap: ", h)
+    print("After building heap: ")
+    print(h)
+    print_tree(h)
