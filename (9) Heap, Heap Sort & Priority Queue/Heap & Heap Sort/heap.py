@@ -21,18 +21,63 @@ def is_max_heap(heap):
     return True
 
 
+def max_heapify(heap, heap_size, i):
+    l = left(i)
+    r = right(i)
+
+    if l <= heap_size and heap[l] > heap[i]:
+        largest = l
+    else:
+        largest = i
+
+    if r <= heap_size and heap[r] > heap[largest]:
+        largest = r
+
+    if largest != i:
+        heap[i], heap[largest] = heap[largest], heap[i]
+        max_heapify(heap, heap_size, largest)
+
+
+def build_max_heap(heap):
+    heap_size = len(heap) - 1
+
+    for i in range(heap_size // 2, 0, -1):
+        max_heapify(heap, heap_size, i)
+
+
 if __name__ == "__main__":
-    H = [None, 19, 7, 17, 3, 5, 12, 10, 1, 2]
-    print(H, is_max_heap(H))
+    # Is the list Max Heap
+    print("Is the list Max Heap: ")
+    h = [None, 19, 7, 17, 3, 5, 12, 10, 1, 2]
+    print(h, is_max_heap(h))
 
-    H = [None, 19, 7, 17, 3, 5, 12, 10, 1, 4]
-    print(H, is_max_heap(H))
+    h = [None, 19, 7, 17, 3, 5, 12, 10, 1, 4]
+    print(h, is_max_heap(h))
 
-    H = [None, 1, 2, 3]
-    print(H, is_max_heap(H))
+    h = [None, 1, 2, 3]
+    print(h, is_max_heap(h))
 
-    H = [None, 2, 1, 3]
-    print(H, is_max_heap(H))
+    h = [None, 2, 1, 3]
+    print(h, is_max_heap(h))
 
-    H = [None, 3, 1, 2]
-    print(H, is_max_heap(H))
+    h = [None, 3, 1, 2]
+    print(h, is_max_heap(h))
+
+    # Max Heapify method
+    print("\nMax Heapify: ")
+    h = [None, 19, 7, 12, 3, 5, 17, 10, 1, 2]
+    print(h)
+    max_heapify(h, 9, 3)
+    print(h)
+
+    h = [None, 1, 2, 3]
+    print(h)
+    max_heapify(h, 3, 1)
+    print(h)
+
+    # Build Max Heap
+    print("\nBuild Max Heap:")
+    h = [None, 12, 7, 1, 3, 10, 17, 19, 2, 5]
+    print("Before building heap: ", h)
+    build_max_heap(h)
+    print("After building heap: ", h)
