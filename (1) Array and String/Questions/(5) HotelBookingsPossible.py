@@ -1,5 +1,5 @@
-"""
-    InterviewBit
+""" InterviewBit
+    Difficulty: Medium
     - Hotel Booking Possible
     - Problem Link: https://www.interviewbit.com/problems/hotel-bookings-possible/
 """

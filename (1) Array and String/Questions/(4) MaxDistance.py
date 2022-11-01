@@ -1,13 +1,13 @@
-"""
-    InterviewBit
+""" InterviewBit
+    Difficulty: Medium
     - Max Distance
     - Problem Link: https://www.interviewbit.com/problems/max-distance/
 """
 
 
-def maximum_gap(A):
+def maximum_gap(a):
     numbers = []
-    for i, num in enumerate(A):
+    for i, num in enumerate(a):
         numbers.append((num, i))
 
     numbers.sort()

@@ -1,5 +1,5 @@
-"""
-    LeetCode
+""" LeetCode
+    Difficulty: Medium
     - 53. Maximum Subarray
     - Problem Link: https://leetcode.com/problems/maximum-subarray/
 """
