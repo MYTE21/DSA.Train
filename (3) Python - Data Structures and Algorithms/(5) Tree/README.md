@@ -18,10 +18,10 @@
 * **EXTRA**: Tracking Parent Node.
 
 ## Tree
-<img height="300em" src="../assets/(5) Tree/tree.png" alt="">
+<img height="300em" src="../../assets/(5)%20Tree/tree.png" alt="">
 
 ## Binary Tree
-<img height="300em" src="../assets/(5) Tree/binary_tree.png" alt="">
+<img height="300em" src="../../assets/(5)%20Tree/binary_tree.png" alt="">
 
 
 
