@@ -4,3 +4,4 @@ wheel==0.37.1
 binarytree~=6.5.1
 requests
 bs4
+pandas
