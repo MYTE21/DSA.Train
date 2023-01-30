@@ -1,4 +1,4 @@
-def breadth_first_search(graph, node):
+def breath_first_search(graph, node):
     queue = []
     visited = []
 
@@ -26,4 +26,4 @@ if __name__ == "__main__":
     }
     source_node = "5"
 
-    breadth_first_search(source_graph, source_node)
+    breath_first_search(source_graph, source_node)
