@@ -3,9 +3,10 @@ Solution: Using two nested-loops.
 Time Complexity: O(n^2).
 Space Complexity: O(1)
 """
+from typing import List
 
 
-def maximum_gap(num_list):
+def maximum_gap(num_list: List[int]) -> int:
     max_gap = 0
 
     for i in range(len(num_list) - 1):
