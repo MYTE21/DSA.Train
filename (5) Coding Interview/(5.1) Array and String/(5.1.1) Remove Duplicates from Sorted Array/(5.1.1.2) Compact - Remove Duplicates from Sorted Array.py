@@ -1,17 +1,15 @@
-""" 26. Remove Duplicates from Sorted Array
-Problem Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+"""
+Solution: Using 'set'
+Time Complexity: O(n)
+Space Complexity: O(n)
 """
 from typing import List
 
 
 def remove_duplicates(nums: List[int]) -> int:
-    count = 1
-    for i in range(len(nums) - 1):
-        if nums[i] != nums[i + 1]:
-            nums[count] = nums[i + 1]
-            count += 1
-
-    return count
+    unique_nums = list(set(nums))
+    unique_nums.sort()
+    return len(unique_nums)
 
 
 if __name__ == "__main__":
