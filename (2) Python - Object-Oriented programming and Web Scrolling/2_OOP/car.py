@@ -7,8 +7,7 @@ class Car:
         self.cc = cc
 
     def __repr__(self):
-        return f"Car(name = {self.name}, manufacturer = {self.manufacturer}, color = {self.color}, year = {self.year}" \
-               f" cc = {self.cc})"
+        return f"Car(name = {self.name}, manufacturer = {self.manufacturer}, color = {self.color}, year = {self.year} cc = {self.cc})"
 
     def start(self):
         print(f" {self.name} - Starting the engine ...")
