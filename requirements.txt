@@ -1,1 +1,1 @@
-requests
+ruff == 0.15.1

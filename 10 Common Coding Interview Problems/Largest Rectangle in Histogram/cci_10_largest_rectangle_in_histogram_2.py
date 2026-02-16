@@ -15,8 +15,8 @@ Divide and Conquer Solution:
 
 
 class Solution:
-    def largest_rectangle_area(self,heights: list[int]) -> int:
-        return self.rectangle(heights, 0, len(heights)-1)
+    def largest_rectangle_area(self, heights: list[int]) -> int:
+        return self.rectangle(heights, 0, len(heights) - 1)
 
     def rectangle(self, heights, low, high):
         if low > high:
@@ -24,14 +24,14 @@ class Solution:
         elif low == high:
             return heights[low]
         else:
-            minh = min(heights[low:high+1])
-            pos_min = heights.index(minh, low, high+1)
-            from_left = self.rectangle(heights, low, pos_min-1)
-            from_right = self.rectangle(heights, pos_min+1, high)
-            return max(minh*(high-low+1), from_left, from_right)
+            minh = min(heights[low : high + 1])
+            pos_min = heights.index(minh, low, high + 1)
+            from_left = self.rectangle(heights, low, pos_min - 1)
+            from_right = self.rectangle(heights, pos_min + 1, high)
+            return max(minh * (high - low + 1), from_left, from_right)
 
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.largest_rectangle_area([2,1,5,6,2,3])) # 10
-    print(s.largest_rectangle_area([2,4])) # 4
+    print(s.largest_rectangle_area([2, 1, 5, 6, 2, 3]))  # 10
+    print(s.largest_rectangle_area([2, 4]))  # 4

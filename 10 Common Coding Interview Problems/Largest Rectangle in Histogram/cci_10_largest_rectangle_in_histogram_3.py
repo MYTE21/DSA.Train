@@ -38,5 +38,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.largest_rectangle_area([2,1,5,6,2,3])) # 10
-    print(s.largest_rectangle_area([2,4])) # 4
+    print(s.largest_rectangle_area([2, 1, 5, 6, 2, 3]))  # 10
+    print(s.largest_rectangle_area([2, 4]))  # 4

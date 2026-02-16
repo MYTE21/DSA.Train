@@ -20,9 +20,11 @@ class Solution:
         for i in range(1, len(heights)):
             start = i
 
-            while stack[-1][1] > heights[i]: # stack[-1][1]: height of the bar on top of stack
+            while (
+                stack[-1][1] > heights[i]
+            ):  # stack[-1][1]: height of the bar on top of stack
                 top_index, top_height = stack.pop()
-                max_area = max(max_area, top_height*(i-top_index))
+                max_area = max(max_area, top_height * (i - top_index))
                 start = top_index
 
             stack.append((start, heights[i]))
@@ -32,5 +34,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.largest_rectangle_area([2,1,5,6,2,3])) # 10
-    print(s.largest_rectangle_area([2,4])) # 4
+    print(s.largest_rectangle_area([2, 1, 5, 6, 2, 3]))  # 10
+    print(s.largest_rectangle_area([2, 4]))  # 4
