@@ -20,7 +20,7 @@ def build(arr: list[int], tree: list[int | float], index: int, low: int, high: i
 
 
 def query(tree: list[int | float], index: int, low: int, high: int,
-          left: int, right: int) -> int:
+          left: int, right: int) -> int | float:
     """
     Perform range maximum query for interval [left, right].
     """
